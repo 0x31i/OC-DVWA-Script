@@ -41,13 +41,13 @@ This script automates the installation process for [DVWA (Damn Vulnerable Web Ap
 
 1. Installation:
    ```bash
-   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh)"
+   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OC-DVWA-Script/main/Install-DVWA.sh)"
 
    ```
 
 1. Instalación:
    ```bash
-   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh)"
+   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OC-DVWA-Script/main/Install-DVWA.sh)"
 
    ```
 
