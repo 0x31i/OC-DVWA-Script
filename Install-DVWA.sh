@@ -192,7 +192,7 @@ else
     # La carpeta no existe, descargar DVWA desde GitHub / Folder does not exist, download DVWA from GitHub
     download_message=$(get_language_message "\e[96mDownloading DVWA from GitHub...\e[0m" "\e[96mDescargando DVWA desde GitHub...\e[0m")
     echo -e "$download_message"
-    git clone https://github.com/digininja/DVWA.git /var/www/html/DVWA
+    git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/DVWA
     sleep 2
 fi
 # Verificar si MariaDB ya está habilitado / Check if MariaDB is already enabled
