@@ -161,9 +161,9 @@ check_program git
 # Descargar el repositorio DVWA desde GitHub / Download DVWA repository from GitHub
 
 # Comprobando si la carpeta ya existe / Checking if the folder already exists
-if [ -d "/var/www/html/OC" ]; then
+if [ -d "/var/www/html/DVWA" ]; then
     # La carpeta ya existe / The folder already exists
-    warning_message=$(get_language_message "\e[91mAttention! The OC folder is already created.\e[0m" "es" "\e[91m¡Atención! La carpeta DVWA ya está creada.\e[0m")
+    warning_message=$(get_language_message "\e[91mAttention! The DVWA folder is already created.\e[0m" "es" "\e[91m¡Atención! La carpeta DVWA ya está creada.\e[0m")
     echo -e "$warning_message"
 
     # Preguntar al usuario qué acción tomar / Ask the user what action to take
@@ -171,12 +171,12 @@ if [ -d "/var/www/html/OC" ]; then
 
     if [[ "$user_response" == "s" || "$user_response" == "y" ]]; then
         # Borrar la carpeta existente / Delete existing folder
-        rm -rf /var/www/html/OC
+        rm -rf /var/www/html/DVWA
 
         # Descargar DVWA desde GitHub / Download DVWA from GitHub
         download_message=$(get_language_message "\e[96mDownloading DVWA from GitHub...\e[0m" "\e[96mDescargando DVWA desde GitHub...\e[0m")
         echo -e "$download_message"
-        git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/OC
+        git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/DVWA
         sleep 2
     elif [ "$user_response" == "n" ]; then
         # El usuario elige no descargar / User chooses not to download
@@ -192,7 +192,7 @@ else
     # La carpeta no existe, descargar DVWA desde GitHub / Folder does not exist, download DVWA from GitHub
     download_message=$(get_language_message "\e[96mDownloading DVWA from GitHub...\e[0m" "\e[96mDescargando DVWA desde GitHub...\e[0m")
     echo -e "$download_message"
-    git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/OC
+    git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/DVWA
     sleep 2
 fi
 # Verificar si MariaDB ya está habilitado / Check if MariaDB is already enabled
@@ -226,14 +226,14 @@ sleep 2
 # Copia de la carpeta DVWA a /var/www/html / Coping DVWA folder to /var/www/html
 dvwa_config_message=$(get_language_message "\e[96mConfiguring DVWA...\e[0m" "\e[96mConfigurando DVWA...\e[0m")
 echo -e "$dvwa_config_message"
-cp /var/www/html/OC/config/config.inc.php.dist /var/www/html/OC/config/config.inc.php
+cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php
 sleep 2
 
 # Asignar los permisos adecuados a DVWA / Assign the appropriate permissions to DVWA
 permissions_config_message=$(get_language_message "\e[96mConfiguring permissions...\e[0m" "\e[96mConfigurando permisos...\e[0m")
 echo -e "$permissions_config_message"
-chown -R www-data:www-data /var/www/html/OC
-chmod -R 755 /var/www/html/OC
+chown -R www-data:www-data /var/www/html/DVWA
+chmod -R 755 /var/www/html/DVWA
 sleep 2
 
 php_config_message=$(get_language_message "\e[96mConfiguring PHP...\e[0m" "\e[96mConfigurando PHP...\e[0m")
