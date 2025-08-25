@@ -226,7 +226,7 @@ sleep 2
 # Copia de la carpeta DVWA a /var/www/html / Coping DVWA folder to /var/www/html
 dvwa_config_message=$(get_language_message "\e[96mConfiguring DVWA...\e[0m" "\e[96mConfigurando DVWA...\e[0m")
 echo -e "$dvwa_config_message"
-cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php
+cp /var/www/html/OC/config/config.inc.php.dist /var/www/html/OC/config/config.inc.php
 sleep 2
 
 # Asignar los permisos adecuados a DVWA / Assign the appropriate permissions to DVWA
