@@ -52,7 +52,7 @@ echo -e "\033[96m\033[1m
 \033[0m"
 echo
 echo -e "\033[92m╓────────────────────────────────────────────────────────────╖"
-center_text "$(get_language_message "Welcome to the DVWA setup!" "¡Bienvenido al instalador de DVWA!")" "$line_length"
+center_text "$(get_language_message "Welcome to the OC setup!" "¡Bienvenido al instalador de DVWA!")" "$line_length"
 center_text "$(get_language_message "Script Name: Install-DVWA.sh " "Nombre del Script: Install-DVWA.sh ")" "$line_length"
 center_text "$(get_language_message "Author: IamCarron " "Autor: IamCarron ")" "$line_length"
 center_text "$(get_language_message "Github Repo: https://github.com/IamCarron/DVWA-Script" "GitHub Repo: https://github.com/IamCarron/DVWA-Script")" "$line_length"
@@ -163,7 +163,7 @@ check_program git
 # Comprobando si la carpeta ya existe / Checking if the folder already exists
 if [ -d "/var/www/html/DVWA" ]; then
     # La carpeta ya existe / The folder already exists
-    warning_message=$(get_language_message "\e[91mAttention! The DVWA folder is already created.\e[0m" "es" "\e[91m¡Atención! La carpeta DVWA ya está creada.\e[0m")
+    warning_message=$(get_language_message "\e[91mAttention! The OC folder is already created.\e[0m" "es" "\e[91m¡Atención! La carpeta DVWA ya está creada.\e[0m")
     echo -e "$warning_message"
 
     # Preguntar al usuario qué acción tomar / Ask the user what action to take
@@ -171,16 +171,16 @@ if [ -d "/var/www/html/DVWA" ]; then
 
     if [[ "$user_response" == "s" || "$user_response" == "y" ]]; then
         # Borrar la carpeta existente / Delete existing folder
-        rm -rf /var/www/html/DVWA
+        rm -rf /var/www/html/OC
 
         # Descargar DVWA desde GitHub / Download DVWA from GitHub
-        download_message=$(get_language_message "\e[96mDownloading DVWA from GitHub...\e[0m" "\e[96mDescargando DVWA desde GitHub...\e[0m")
+        download_message=$(get_language_message "\e[96mDownloading OC from GitHub...\e[0m" "\e[96mDescargando DVWA desde GitHub...\e[0m")
         echo -e "$download_message"
-        git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/DVWA
+        git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/OC
         sleep 2
     elif [ "$user_response" == "n" ]; then
         # El usuario elige no descargar / User chooses not to download
-        no_download_message=$(get_language_message "\e[96mContinuing without downloading DVWA.\e[0m" "\e[96mContinuando sin descargar DVWA.\e[0m")
+        no_download_message=$(get_language_message "\e[96mContinuing without downloading OC.\e[0m" "\e[96mContinuando sin descargar DVWA.\e[0m")
         echo -e "$no_download_message"
     else
         # Respuesta inválida / Invalid answer
@@ -192,7 +192,7 @@ else
     # La carpeta no existe, descargar DVWA desde GitHub / Folder does not exist, download DVWA from GitHub
     download_message=$(get_language_message "\e[96mDownloading DVWA from GitHub...\e[0m" "\e[96mDescargando DVWA desde GitHub...\e[0m")
     echo -e "$download_message"
-    git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/DVWA
+    git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/OC
     sleep 2
 fi
 # Verificar si MariaDB ya está habilitado / Check if MariaDB is already enabled
