@@ -160,9 +160,9 @@ check_program git
 # Descargar el repositorio DVWA desde GitHub / Download DVWA repository from GitHub
 
 # Comprobando si la carpeta ya existe / Checking if the folder already exists
-if [ -d "/var/www/html/DVWA" ]; then
+if [ -d "/var/www/html/OC" ]; then
     # La carpeta ya existe / The folder already exists
-    warning_message=$(get_language_message "\e[91mAttention! The OC folder is already created.\e[0m" "es" "\e[91m¡Atención! La carpeta DVWA ya está creada.\e[0m")
+    warning_message=$(get_language_message "\e[91mAttention! The OC folder is already created.\e[0m" "es" "\e[91m¡Atención! La carpeta OC ya está creada.\e[0m")
     echo -e "$warning_message"
 
     # Preguntar al usuario qué acción tomar / Ask the user what action to take
@@ -173,7 +173,7 @@ if [ -d "/var/www/html/DVWA" ]; then
         rm -rf /var/www/html/OC
 
         # Descargar DVWA desde GitHub / Download DVWA from GitHub
-        download_message=$(get_language_message "\e[96mDownloading OC from GitHub...\e[0m" "\e[96mDescargando DVWA desde GitHub...\e[0m")
+        download_message=$(get_language_message "\e[96mDownloading OC from GitHub...\e[0m" "\e[96mDescargando OC desde GitHub...\e[0m")
         echo -e "$download_message"
         git clone https://github.com/0x31i/OCWA.git /var/www/html/OC
         sleep 2
