@@ -2,8 +2,6 @@
 
 ![OCWA Logo](https://raw.githubusercontent.com/0x31i/OCWA/master/dvwa/images/logo.png)
 
-<img src="(https://raw.githubusercontent.com/0x31i/OCWA/master/dvwa/images/logo.png)" width="150" height="100" />
-
 ## Table of Contents 📚
 - [Description](#description)
 - [Features](#features)
