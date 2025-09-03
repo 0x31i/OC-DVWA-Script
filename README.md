@@ -1,7 +1,5 @@
 # OCWA Installer
 
-![OCWA Logo](https://raw.githubusercontent.com/0x31i/OCWA/master/dvwa/images/logo.png)
-
 ## Table of Contents
 - [Description](#description)
 - [Features](#features)
