@@ -1,6 +1,6 @@
-# DVWA Installer
+# OCWA Installer
 
-![DVWA Logo](https://raw.githubusercontent.com/ethicalhack3r/DVWA/master/dvwa/images/logo.png)
+![OCWA Logo](https://raw.githubusercontent.com/0x31i/OCWA/master/dvwa/images/logo.png)
 
 ## Table of Contents 📚
 - [Description](#description)
@@ -41,7 +41,7 @@ This script automates the installation process for [DVWA (Damn Vulnerable Web Ap
 
 1. Installation:
    ```bash
-   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OC-DVWA-Script/main/Install-DVWA.sh)"
+   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OCWA-Script/main/Install-OCWA.sh)"
 
    ```
 
