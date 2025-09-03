@@ -2,7 +2,7 @@
 
 ![OCWA Logo](https://raw.githubusercontent.com/0x31i/OCWA/master/dvwa/images/logo.png)
 
-## Table of Contents 📚
+## Table of Contents
 - [Description](#description)
 - [Features](#features)
 - [Installation](#installation)
@@ -15,29 +15,18 @@
 
 ---
 
-## Descripción 📋
+## Description
 
-Este script automatiza el proceso de instalación de [DVWA (Damn Vulnerable Web Application)](https://github.com/digininja/DVWA), una aplicación web diseñada intencionalmente para ser vulnerable a varios ataques. DVWA es una herramienta para aprender y practicar seguridad de aplicaciones web.
+This script automates the installation process for [OCWA (Overclock Web Application)](https://github.com/0x31i/OCWA), a web application intentionally designed to be vulnerable to various attacks. OCWA is a tool for learning and practicing web application security.
 
-## Características ✨
-
-- Instalación automatizada de DVWA con las dependencias necesarias.
-- Soporte para los idiomas inglés y español.
-
----
-
-## Description 📖
-
-This script automates the installation process for [DVWA (Damn Vulnerable Web Application)](https://github.com/digininja/DVWA), a web application intentionally designed to be vulnerable to various attacks. DVWA is a tool for learning and practicing web application security.
-
-## Features ✨
+## Features
 
 - Automated installation of DVWA with necessary dependencies.
 - Supports both English and Spanish languages.
 
 ---
 
-## Installation / Instalación 🛠️
+## Installation
 
 1. Installation:
    ```bash
@@ -47,7 +36,7 @@ This script automates the installation process for [DVWA (Damn Vulnerable Web Ap
 
 1. Instalación:
    ```bash
-   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OC-DVWA-Script/main/Install-DVWA.sh)"
+   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OCWA-Script/main/Install-OCWA.sh)"
 
    ```
 
@@ -58,7 +47,7 @@ This script automates the installation process for [DVWA (Damn Vulnerable Web Ap
 
 ---
 
-## Usage / Uso 🚀
+## Usage
 
 Follow the on-screen instructions to install DVWA. The script will guide you through the process, including updating repositories, installing dependencies, and configuring the DVWA database.
 
@@ -66,7 +55,7 @@ Sigue las instrucciones en pantalla para instalar DVWA. El script te guiará a t
 
 ---
 
-## Credentials / Credenciales 🔐
+## Credentials
 
 After install, use the following credentials:
 
@@ -77,7 +66,7 @@ Después de la instalación, utiliza las siguientes credenciales:
   
 ---
 
-## Language Support / Soporte de Idiomas 🌐
+## Language Support
 
 The script supports both English and Spanish languages. It automatically detects the system language and provides instructions accordingly.
 
@@ -85,15 +74,15 @@ El script admite los idiomas inglés y español. Detecta automáticamente el idi
 
 ---
 
-## Contributing / Contribuciones 🤝
+## Contributing
 
-Contributions are welcome! If you encounter any issues or have suggestions for improvement, please create a pull request or open an issue in the [GitHub repository](https://github.com/IamCarron/DVWA-Script).
+Contributions are welcome! If you encounter any issues or have suggestions for improvement, please create a pull request or open an issue in the [GitHub repository](https://github.com/0x31i/OCWA-Script).
 
-¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes sugerencias de mejora, por favor, crea una solicitud de extracción o abre un problema en el [repositorio de GitHub](https://github.com/IamCarron/DVWA-Script).
+¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes sugerencias de mejora, por favor, crea una solicitud de extracción o abre un problema en el [repositorio de GitHub](https://github.com/0x31i/OCWA-Script).
 
 ---
 
-## License / Licencia 📄
+## License
 
 This project is licensed under the [MIT License](LICENSE).
 
