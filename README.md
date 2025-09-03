@@ -21,7 +21,7 @@ This script automates the installation process for [OCWA (Overclock Web Applicat
 
 ## Features
 
-- Automated installation of DVWA with necessary dependencies.
+- Automated installation of OCWA with necessary dependencies.
 - Supports both English and Spanish languages.
 
 ---
@@ -49,9 +49,9 @@ This script automates the installation process for [OCWA (Overclock Web Applicat
 
 ## Usage
 
-Follow the on-screen instructions to install DVWA. The script will guide you through the process, including updating repositories, installing dependencies, and configuring the DVWA database.
+Follow the on-screen instructions to install OCWA. The script will guide you through the process, including updating repositories, installing dependencies, and configuring the OCWA database.
 
-Sigue las instrucciones en pantalla para instalar DVWA. El script te guiará a través del proceso, incluyendo la actualización de repositorios, la instalación de dependencias y la configuración de la base de datos de DVWA.
+Sigue las instrucciones en pantalla para instalar OCWA. El script te guiará a través del proceso, incluyendo la actualización de repositorios, la instalación de dependencias y la configuración de la base de datos de OCWA.
 
 ---
 
