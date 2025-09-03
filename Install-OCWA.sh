@@ -52,9 +52,9 @@ echo -e "\033[96m\033[1m
 echo
 echo -e "\033[92m╓────────────────────────────────────────────────────────────╖"
 center_text "$(get_language_message "Welcome to the OC setup!" "¡Bienvenido al instalador de DVWA!")" "$line_length"
-center_text "$(get_language_message "Script Name: Install-DVWA.sh " "Nombre del Script: Install-DVWA.sh ")" "$line_length"
-center_text "$(get_language_message "Author: IamCarron " "Autor: IamCarron ")" "$line_length"
-center_text "$(get_language_message "Github Repo: https://github.com/IamCarron/DVWA-Script" "GitHub Repo: https://github.com/IamCarron/DVWA-Script")" "$line_length"
+center_text "$(get_language_message "Script Name: Install-OCWA.sh " "Nombre del Script: Install-DVWA.sh ")" "$line_length"
+center_text "$(get_language_message "Reimagined by: 0x31i " "OG Autor: IamCarron ")" "$line_length"
+center_text "$(get_language_message "Github Repo: https://github.com/0x31i/OCWA-Script" "GitHub Repo: https://github.com/0x31i/OCWA-Script")" "$line_length"
 center_text "$(get_language_message "Installer Version: 1.0.5 " "Versión del Instalador: 1.0.5 ")" "$line_length"
 echo -e "╙────────────────────────────────────────────────────────────╜\033[0m"
 echo
@@ -175,7 +175,7 @@ if [ -d "/var/www/html/DVWA" ]; then
         # Descargar DVWA desde GitHub / Download DVWA from GitHub
         download_message=$(get_language_message "\e[96mDownloading OC from GitHub...\e[0m" "\e[96mDescargando DVWA desde GitHub...\e[0m")
         echo -e "$download_message"
-        git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/OC
+        git clone https://github.com/0x31i/OCWA.git /var/www/html/OC
         sleep 2
     elif [ "$user_response" == "n" ]; then
         # El usuario elige no descargar / User chooses not to download
@@ -191,7 +191,7 @@ else
     # La carpeta no existe, descargar DVWA desde GitHub / Folder does not exist, download DVWA from GitHub
     download_message=$(get_language_message "\e[96mDownloading DVWA from GitHub...\e[0m" "\e[96mDescargando DVWA desde GitHub...\e[0m")
     echo -e "$download_message"
-    git clone https://github.com/0x31i/OC-DVWA.git /var/www/html/OC
+    git clone https://github.com/0x31i/OCWA.git /var/www/html/OC
     sleep 2
 fi
 # Verificar si MariaDB ya está habilitado / Check if MariaDB is already enabled
@@ -223,7 +223,7 @@ run_sql_commands
 sleep 2
 
 # Copia de la carpeta DVWA a /var/www/html / Coping DVWA folder to /var/www/html
-dvwa_config_message=$(get_language_message "\e[96mConfiguring DVWA...\e[0m" "\e[96mConfigurando DVWA...\e[0m")
+dvwa_config_message=$(get_language_message "\e[96mConfiguring OCWA...\e[0m" "\e[96mConfigurando OCWA...\e[0m")
 echo -e "$dvwa_config_message"
 cp /var/www/html/OC/config/config.inc.php.dist /var/www/html/OC/config/config.inc.php
 sleep 2
@@ -283,7 +283,7 @@ systemctl enable apache2 &>/dev/null
 systemctl restart apache2 &>/dev/null
 sleep 2
 
-success_message=$(get_language_message "\e[92mDVWA has been installed successfully. Access \e[93mhttp://localhost/DVWA\e[0m \e[92mto get started." "\e[92mDVWA se ha instalado correctamente. Accede a \e[93mhttp://localhost/DVWA\e[0m \e[92mpara comenzar.")
+success_message=$(get_language_message "\e[92mOCWA has been installed successfully. Access \e[93mhttp://localhost/OC\e[0m \e[92mto get started." "\e[92mOCWA se ha instalado correctamente. Accede a \e[93mhttp://localhost/OC\e[0m \e[92mpara comenzar.")
 echo -e "$success_message"
 
 #Mostrar al usuario las credenciales después de la configuración / Show user credentials after configuration
@@ -294,5 +294,5 @@ echo -e "Password: \033[93mpassword\033[0m"
 
 # Fin del instalador / End of installer
 echo
-final_message=$(get_language_message "\033[95mWith ♡ by IamCarron" "\033[95mCon ♡ by IamCarron")
+final_message=$(get_language_message "\033[95mWith ♡ by 0x31i" "\033[95mCon ♡ by 0x31i")
 echo -e "$final_message"
