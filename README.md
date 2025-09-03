@@ -1,7 +1,8 @@
 # OCWA Installer
 
-![OCWA Logo](https://raw.githubusercontent.com/0x31i/OCWA/master/dvwa/images/logo.png =100x100)
-<img src="[http://....jpg](https://raw.githubusercontent.com/0x31i/OCWA/master/dvwa/images/logo.png)" width="50" height="50" />
+![OCWA Logo](https://raw.githubusercontent.com/0x31i/OCWA/master/dvwa/images/logo.png)
+
+<img src="(https://raw.githubusercontent.com/0x31i/OCWA/master/dvwa/images/logo.png)" width="50" height="50" />
 
 ## Table of Contents 📚
 - [Description](#description)
