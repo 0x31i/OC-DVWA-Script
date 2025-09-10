@@ -349,15 +349,15 @@ setup_ctf_database() {
     
     echo -e "\e[96mSetting up CTF database tables...\e[0m"
     
-    # Generate deterministic flag numbers for database
-    local FRODO_NUM=$(generate_flag_number "FRODO")
-    local LEGOLAS_NUM=$(generate_flag_number "LEGOLAS")
-    local MERRY_NUM=$(generate_flag_number "MERRY")
-    local PIPPIN_NUM=$(generate_flag_number "PIPPIN")
-    local THEODEN_NUM=$(generate_flag_number "THEODEN")
-    local HALDIR_NUM=$(generate_flag_number "HALDIR")
-    local MORGOTH_NUM=$(generate_flag_number "MORGOTH")
-    local SAURON_NUM=$(generate_flag_number "SAURON")
+    # Generate deterministic SHORT flag numbers for database (to fit in users table)
+    local FRODO_SHORT=$(generate_short_flag_number "FRODO")
+    local LEGOLAS_SHORT=$(generate_short_flag_number "LEGOLAS")
+    local MERRY_SHORT=$(generate_short_flag_number "MERRY")
+    local PIPPIN_SHORT=$(generate_short_flag_number "PIPPIN")
+    local THEODEN_SHORT=$(generate_short_flag_number "THEODEN")
+    local HALDIR_SHORT=$(generate_short_flag_number "HALDIR")
+    local MORGOTH_SHORT=$(generate_short_flag_number "MORGOTH")
+    local SAURON_SHORT=$(generate_short_flag_number "SAURON")
     
     # Create CTF flags table
     mysql -u"$sql_user" -p"$sql_password" dvwa << EOF
@@ -369,20 +369,20 @@ CREATE TABLE IF NOT EXISTS ctf_flags (
     hint TEXT
 );
 
--- Insert flag records
+-- Insert flag records (using short format for database flags)
 INSERT INTO ctf_flags (flag_name, flag_value, difficulty, hint) VALUES
-('HTML Comment', 'FLAG{FRODO${FRODO_NUM}}', 'easy', 'View the page source'),
-('Console Log', 'FLAG{LEGOLAS${LEGOLAS_NUM}}', 'easy', 'Check the browser console'),
-('Cookie', 'FLAG{MERRY${MERRY_NUM}}', 'easy', 'Inspect your cookies'),
-('SQL Injection', 'FLAG{PIPPIN${PIPPIN_NUM}}', 'easy', 'Try SQL injection'),
-('Base64', 'FLAG{THEODEN${THEODEN_NUM}}', 'medium', 'Decode the encoded'),
-('API Endpoint', 'FLAG{HALDIR${HALDIR_NUM}}', 'medium', 'Explore API endpoints'),
-('Blind SQL', 'FLAG{MORGOTH${MORGOTH_NUM}}', 'hard', 'Time-based blind SQL injection'),
-('HTTP Header', 'FLAG{SAURON${SAURON_NUM}}', 'hard', 'Inspect response headers');
+('HTML Comment', 'FLAG{FRO${FRODO_SHORT}}', 'easy', 'View the page source'),
+('Console Log', 'FLAG{LEG${LEGOLAS_SHORT}}', 'easy', 'Check the browser console'),
+('Cookie', 'FLAG{MER${MERRY_SHORT}}', 'easy', 'Inspect your cookies'),
+('SQL Injection', 'FLAG{PIP${PIPPIN_SHORT}}', 'easy', 'Try SQL injection'),
+('Base64', 'FLAG{THE${THEODEN_SHORT}}', 'medium', 'Decode the encoded'),
+('API Endpoint', 'FLAG{HAL${HALDIR_SHORT}}', 'medium', 'Explore API endpoints'),
+('Blind SQL', 'FLAG{MOR${MORGOTH_SHORT}}', 'hard', 'Time-based blind SQL injection'),
+('HTTP Header', 'FLAG{SAU${SAURON_SHORT}}', 'hard', 'Inspect response headers');
 
--- Create special user for blind SQL flag
+-- Create special user for blind SQL flag (using short format to fit in first_name column)
 INSERT INTO users (user_id, first_name, last_name, user, password) 
-VALUES (999, 'FLAG{MORGOTH${MORGOTH_NUM}}', 'Hidden', 'ctf_flag', MD5('impossible_to_guess'))
+VALUES (999, 'FLAG{MOR${MORGOTH_SHORT}}', 'Hidden', 'ctf_flag', MD5('impossible_to_guess'))
 ON DUPLICATE KEY UPDATE first_name = VALUES(first_name);
 
 EOF
