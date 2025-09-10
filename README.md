@@ -32,7 +32,13 @@ This script automates the installation process for [OCWA (Overclock Web Applicat
 
    ```
 
-1. Instalación:
+2. Install With CTF Flags:
+   ```bash
+   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OCWA-Script/main/Install-OCWA-vCTF.sh)"
+
+   ```
+
+1(alt). Instalación:
    ```bash
    sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OCWA-Script/main/Install-OCWA.sh)"
 
