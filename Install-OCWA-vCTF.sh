@@ -224,14 +224,14 @@ dvwaHtmlEcho( \$page );
 EOF
         echo -e "\033[92mâœ" Modified index.php with 10 flags\033[0m"
         echo "EASY FLAGS in index.php:" >> "$ocwa_path/flags/flag_list.txt"
-        echo "  - FLAG{FRODO${FRODO_NUM}} (HTML comment)" >> "$ocwa_path/flags/flag_list.txt"
-        echo "  - FLAG{SAM${SAM_NUM}} (TODO comment)" >> "$ocwa_path/flags/flag_list.txt"
-        echo "  - FLAG{GANDALF${GANDALF_NUM}} (Hidden div)" >> "$ocwa_path/flags/flag_list.txt"
-        echo "  - FLAG{ARAGORN${ARAGORN_NUM}} (Data attribute)" >> "$ocwa_path/flags/flag_list.txt"
-        echo "  - FLAG{LEGOLAS${LEGOLAS_NUM}} (Console log)" >> "$ocwa_path/flags/flag_list.txt"
-        echo "  - FLAG{GIMLI${GIMLI_NUM}} (JS variable)" >> "$ocwa_path/flags/flag_list.txt"
-        echo "  - FLAG{BOROMIR${BOROMIR_NUM}} (CSS comment)" >> "$ocwa_path/flags/flag_list.txt"
-        echo "  - FLAG{MERRY${MERRY_NUM}} (Cookie)" >> "$ocwa_path/flags/flag_list.txt"
+        echo "  - FLAG{FRODO${FRODO_NUM}} (HTML comment)" >> "${ocwa_path}/flags/flag_list.txt"
+        echo "  - FLAG{SAM${SAM_NUM}} (TODO comment)" >> "${ocwa_path}/flags/flag_list.txt"
+        echo "  - FLAG{GANDALF${GANDALF_NUM}} (Hidden div)" >> "${ocwa_path}/flags/flag_list.txt"
+        echo "  - FLAG{ARAGORN${ARAGORN_NUM}} (Data attribute)" >> "${ocwa_path}/flags/flag_list.txt"
+        echo "  - FLAG{LEGOLAS${LEGOLAS_NUM}} (Console log)" >> "${ocwa_path}/flags/flag_list.txt"
+        echo "  - FLAG{GIMLI${GIMLI_NUM}} (JS variable)" >> "${ocwa_path}/flags/flag_list.txt"
+        echo "  - FLAG{BOROMIR${BOROMIR_NUM}} (CSS comment)" >> "${ocwa_path}/flags/flag_list.txt"
+        echo "  - FLAG{MERRY${MERRY_NUM}} (Cookie)" >> "${ocwa_path}/flags/flag_list.txt" 
     fi
     
     # 2. Create robots.txt with flag
