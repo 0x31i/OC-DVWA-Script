@@ -38,12 +38,6 @@ This script automates the installation process for [OCWA (Overclock Web Applicat
 
    ```
 
-1(alt). Instalación:
-   ```bash
-   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OCWA-Script/main/Install-OCWA.sh)"
-
-   ```
-
 **If you are willing to use root and empty password for the execution of MySQL commands the script must be run as root user.**
 
 **Si vas a usar el usuario root y la contraseña vacia para ejecutar el script tienes que hacerlo como usuario root.**
