@@ -43,9 +43,9 @@ This script automates the installation process for [OCWA (Overclock Web Applicat
 
    ```
 
-2. Install With CTF Flags:
+2. Automatically make Debian vulnerable, and generate flags:
    ```bash
-   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OCWA-Script/main/Install-OCWA-vCTF.sh)"
+   sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/0x31i/OCWA-Script/main/vulnDebian_Setup.sh)"
 
    ```
 
