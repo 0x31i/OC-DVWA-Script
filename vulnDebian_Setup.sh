@@ -33,6 +33,7 @@ mkdir -p /opt/oc/{flags,scripts,exploits,configs}
 mkdir -p /var/oc/{backup,logs,data}
 mkdir -p /home/user1/{documents,downloads,scripts}
 mkdir -p /opt/secrets
+mkdir -p /opt/scripts
 mkdir -p /var/backups/system
 mkdir -p /tmp/.hidden
 
