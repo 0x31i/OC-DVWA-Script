@@ -51,7 +51,7 @@ This script automates the installation process for [OCWA (Overclock Web Applicat
 
 3. Configure Apache
    ```sh
-   sudo sed -i.backup 's|/var/www/html|/var/www/html/OC|g' /etc/apache2/sites-available/000-default.conf && sudo apache2ctl configtest && sudo service apache2 restart
+   sudo sed -i.backup 's|DocumentRoot /var/www/html.*|DocumentRoot /var/www/html/OC|g' /etc/apache2/sites-available/000-default.conf && sudo apache2ctl configtest && sudo service apache2 restart
    ```
 
 **If you are willing to use root and empty password for the execution of MySQL commands the script must be run as root user.**
