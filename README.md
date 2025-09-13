@@ -24,6 +24,15 @@ This script automates the installation process for [OCWA (Overclock Web Applicat
 
 ---
 
+## Prep
+
+0. Updating and Dependencies
+   ```bash
+   sudo apt-get update
+   sudo apt-get install openssh-server postgresql mysql-server -y
+
+   ```
+
 ## Installation
 
 1. Installation:
