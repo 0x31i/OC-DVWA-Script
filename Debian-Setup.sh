@@ -3,7 +3,7 @@
 # ===============================================
 # Vulnerable Debian v13.1 OC Setup Script
 # Purpose: Educational Penetration Testing Lab
-# Author: Security Lab Setup
+# Author: 0x31i
 # Version: 2.0 - Modified
 # ===============================================
 
