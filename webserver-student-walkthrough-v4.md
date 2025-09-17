@@ -382,7 +382,7 @@ Welcome Brandon! You have found the hidden user.
 CTF Flag: FLAG{D**********5}
 ```
 
-🎯 **Second Discovery!** FLAG{D**********5} found after login!
+ **Second Discovery!** FLAG{D**********5} found after login!
 
 💡 **Learning Points:**
 1. **Password reuse is common** - People use the same passwords across services
@@ -1526,7 +1526,7 @@ real    0m45.123s
 **Feroxbuster Visual Output:**
 ```
 ───────────────────────────┬──────────────────────
- 🎯  Target Url            │ http://192.168.148.100
+   Target Url            │ http://192.168.148.100
  🚀  Threads               │ 50
  📖  Wordlist              │ /usr/share/seclists/Discovery/Web-Content/common.txt
  👌  Status Codes          │ [200, 204, 301, 302, 307, 308, 401, 403, 405]
