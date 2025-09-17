@@ -89,9 +89,7 @@ sudo apt install -y \
 ```bash
 # Web application testing tools
 sudo apt install -y \
-    weevely laudanum webshells \   # Pre-built shells
-    php-reverse-shell \             # PHP backdoors
-    veil evasion                    # AV evasion frameworks
+    weevely laudanum webshells   # Pre-built shells
 ```
 
 **Verification Screenshot:**
