@@ -23,7 +23,7 @@ This script automates the installation process for [OCWA (Overclock Web Applicat
 
 ---
 
-## Prep
+## Preparation
 
 0. Updating and Dependencies
    ```bash
