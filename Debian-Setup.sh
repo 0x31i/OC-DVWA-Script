@@ -554,16 +554,8 @@ cat > "$REPORT_FILE" << EOF
 <body>
     <div class="container">
         <div class="hp-theme">
-            <h1 style="color: white; border: none;">⚡ Harry Potter OC Flag Report - Debian v13.1 ⚡</h1>
+            <h1 style="color: white; border: none;">OC Webserver Flag Report - Debian v13.1</h1>
             <h2 style="color: white;">Educational Penetration Testing Lab v2.0</h2>
-        </div>
-        
-        <div class="creds-section">
-            <h3>Network Credentials Discovered</h3>
-            <p><strong>Windows Server 2019:</strong> user1:Password123!</p>
-            <p><strong>Windows 10 Workstation #1:</strong> jsmith:Welcome1</p>
-            <p><strong>Windows 10 Workstation #2:</strong> mjones:Password1</p>
-            <p><em>These credentials are found in /opt/secrets/network_credentials.txt</em></p>
         </div>
         
         <div class="stats">
@@ -766,58 +758,6 @@ cat > "$REPORT_FILE" << EOF
                 </tr>
             </tbody>
         </table>
-        
-        <h2>Exploitation Guide</h2>
-        <h3>Privilege Escalation Paths:</h3>
-        <ul>
-            <li><strong>SUID Binaries:</strong> find, backup_tool</li>
-            <li><strong>Sudo Misconfigurations:</strong> vim, python3, less (for user1, developer, admin_backup)</li>
-            <li><strong>Cron Jobs:</strong> World-writable scripts in /opt/scripts</li>
-            <li><strong>Docker:</strong> Group membership exploitation (if installed)</li>
-            <li><strong>Credential Reuse:</strong> Check Windows credentials on Linux system</li>
-        </ul>
-        
-        <h3>Enumeration Commands:</h3>
-        <pre>
-# Find SUID binaries
-find / -perm -u=s -type f 2>/dev/null
-
-# Check sudo privileges
-sudo -l
-
-# Enumerate users
-cat /etc/passwd | grep -v nologin
-
-# Find world-writable files
-find / -perm -222 -type f 2>/dev/null
-
-# Check for credentials
-find / -name "*.txt" -o -name "*.yml" -o -name "*.conf" 2>/dev/null | xargs grep -l "password\|FLAG"
-
-# Check running services
-systemctl list-units --type=service --state=running
-
-# Find hidden files and directories
-find / -type f -name ".*" 2>/dev/null
-find / -type d -name ".*" 2>/dev/null
-        </pre>
-        
-        <h2>Important Notes</h2>
-        <ul>
-            <li><strong>Network Credentials:</strong> The discovered Windows credentials can be used for lateral movement</li>
-            <li><strong>Main User:</strong> 'user1' is the primary OC user account</li>
-            <li><strong>No Web Flags:</strong> All flags are in system directories, not in /var/www/html</li>
-            <li><strong>Archive Files:</strong> Multiple archives contain flags and credentials</li>
-        </ul>
-        
-        <h2>Recommended Tools</h2>
-        <ul>
-            <li><strong>LinPEAS:</strong> Linux privilege escalation scanner</li>
-            <li><strong>LinEnum:</strong> Scripted local enumeration</li>
-            <li><strong>pspy:</strong> Process monitoring without root</li>
-            <li><strong>GTFOBins:</strong> Unix binary exploitation reference</li>
-            <li><strong>strings/file:</strong> Analyze binaries and files</li>
-        </ul>
     </div>
 </body>
 </html>
