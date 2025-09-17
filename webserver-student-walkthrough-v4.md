@@ -347,9 +347,9 @@ Server: Apache/2.4.51 (Debian)
 
 ┌──(kali㉿kali)-[/opt/breach-parse]
 └─$ cat results-master.txt
-eli@chchcheckit.com:sipsip123
 brandon@chchcheckit.com:sipsip1
-admin@chchcheckit.com:sipsip123
+elias@chchcheckit.com:sipsip1
+elias@chchcheckit.com:sipsip123
 ```
 
 Try the credentials found through OSINT:
