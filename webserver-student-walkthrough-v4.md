@@ -249,6 +249,17 @@ Content-Type: text/html; charset=UTF-8
 
 ### Understanding HTML Comment Reconnaissance
 
+There are multiple ways to view the source code of a web page.
+
+The most common and most straightforward way is simply typing "view-source:" at the front of the URL.
+For example:
+
+```bash
+view-source:192.168.148.100/login.php
+```
+
+Alternative method:
+
 ```bash
 # View source code
 ┌──(kali㉿kali)-[~]
